@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Forecast</title>
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body id="body">
+        <div class="search container text-center">
+            <div class="search input-group justify-content-center">
+                <input type="text" id="search-input" class="form-control" placeholder="Provide the name of the city">
+                <button class="btn" id="search-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <main id="main" class="main-content container animate__animated animate__fadeInUp" style="display: none;">
+            <div id="weather-area" class="mt-4"></div>
+        </main>
+
+        <section id="history-section" class="container mt-4" style="display: none">
+            <h3 class="mb-3 title subtitle">Histórico de Buscas</h3>
+            <div id="history-cards" class="row g-3"></div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

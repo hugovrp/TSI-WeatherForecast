@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+blockquote,
+dd {
+  margin: 0px;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+#body {
+    background: linear-gradient(135deg, rgba(135, 206, 250, 0.8), rgba(70, 130, 180, 0.5));
+    backdrop-filter: blur(12px);
+    transition: background 1s ease-in-out;
+    min-height: 100vh;
+    padding-bottom: 20px;
+    margin: 0;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.search {
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    border: 1px solid rgb(70, 130, 180);
+    outline: none;
+    padding: 13px 16px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: gray;
+    flex: 1;
+}
+
+#search-input:focus {
+    background: white;
+    box-shadow: inset 0 0 0 2px #4dabf7;
+}
+
+#search-btn {
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #1e90ff;
+}
+
+.main-content {
+    color: #fefefe;
+    background: rgba(100, 100, 100, 0.3);
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(12px);
+}
+
+.loading {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.weather-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 auto;
+    width: 90%;
+    align-items: center;
+    gap: 16px;
+}
+
+.title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #fefefe;
+    border-bottom: 2px solid #fefefe;
+    display: inline-block;
+}
+
+.weather-temp {
+    font-size: 50px;
+    margin-bottom: 5px;
+    font-weight: bold; 
+}
+
+.right-content {
+    text-align: center;
+}
+
+.weather-description {
+    font-size: 16px;
+}
+
+.add-info {
+    border-top: 2px solid rgba(255, 255, 255, 0.4);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    gap: 10px;
+}
+
+.add-info .icons {
+    font-size: 42px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.add-info p {
+    font-size: 18px;
+}
+
+#history-section {
+    padding: 0 15px;
+}
+
+
+.history-card {
+    background: rgba(100, 100, 100, 0.3);
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.history-card:hover {
+    background: rgba(100, 100, 100, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.history-card .card-body {
+    padding: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .weather-info {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .title {
+        font-size: 28px;
+    }
+    
+    .weather-temp {
+        font-size: 40px;
+    }
+    
+    .add-info {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .weather-icon {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .main-content {
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+    
+    .weather-temp {
+        font-size: 36px;
+    }
+    
+    .add-info {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .add-info .icons {
+        font-size: 36px;
+    }
+    
+    .history-cards .col-12 {
+        margin-bottom: 10px;
+    }
+}
