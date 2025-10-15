@@ -89,7 +89,7 @@ function renderHistory() {
 }
 
 function check_weather(city) {
-    const api_key = '614d84c2e954e7197a362559c6e19550';
+    const api_key = '';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
     return fetch(url) 
